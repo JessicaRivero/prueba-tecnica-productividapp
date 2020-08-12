@@ -65,6 +65,7 @@ export class CardComponent implements OnInit {
       this._characterService.getAllCharactersByPage(this.nextPage.toString() + this.urlFiltetParams).subscribe(
         response => {
           if (response.info.count > 0) {
+            this.finishPage = response.info.pages;
             for (let i = 0; i < response.results.length; i++) {
               if (!this.characters.some((item) => item.id == response.results[i].id)) {
                 this.characters.push(response.results[i]);
@@ -140,6 +141,7 @@ export class CardComponent implements OnInit {
     this._characterService.getAllCharactersByPage(this.nextPage.toString() + this.urlFiltetParams).subscribe(
       response => {
         if (response.info.count > 0) {
+          this.finishPage = response.info.pages;
           for (let i = 0; i < response.results.length; i++) {
             if (!this.characters.some((item) => item.id == response.results[i].id)) {
               this.characters.push(response.results[i]);
