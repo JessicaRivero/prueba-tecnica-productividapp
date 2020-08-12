@@ -1,0 +1,76 @@
+<div class="section_filter">
+    <div class="filter" (click)="sowFilter()">
+        <div class="filter_text">
+            <p class="text">Filtrar y ordenar</p>
+        </div>
+        <div class="filter_img">
+            <img class="img" src="../assets/images/filtro.svg">
+        </div>
+        <hr class="hr1" color="#F15F79">
+    </div>
+    <br>
+    <div [ngClass]="(showFilter==true)?'filter_content':'filter_content hidden'">
+        <form class="form" #filterForm="ngForm" (ngSubmit)="activeFilter()">
+            <div class="form_field">
+                <label for="filter1_text" class="form_label">Genero:</label>
+                <select name="gender" #gender="ngModel" [(ngModel)]="filter.gender" class="form_select">
+                    <option value="">No aplica</option>
+                    <option value="female">Femenino</option>
+                    <option value="male">Masculino</option>
+                    <option value="genderless">Sin genero</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+            </div>
+            <div class="form_field">
+                <label for="filter2_text" class="form_label">Status:</label>
+                <select name="status" #status="ngModel" [(ngModel)]="filter.status" class="form_select">
+                    <option value="">No aplica</option>
+                    <option value="alive">Viv@</option>
+                    <option value="dead">Muet@</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+            </div>
+            <div class="form_field">
+                <label for="order_text" class="form_label">Ordenar por:</label>
+                <select name="order" #searchCriteriader="ngModel" [(ngModel)]="filter.searchCriteriader"
+                    class="form_select">
+                    <option value="">No aplica</option>
+                    <option value="name,true">Nombre (asc)</option>
+                    <option value="name,false">Nombre (desc)</option>
+                    <option value="species,true">Especie (asc)</option>
+                    <option value="species,false">Especie (desc)</option>
+                </select>
+            </div>
+            <div class="form_button">
+                <input type="submit" value="Filtrar" class="btn">
+                <input type="text" value="Cerrar" class="btn" (click)="hiddenFilter()">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="section_cards">
+    <div class="card" infiniteScroll [infiniteScrollDistance]="1" (scrolled)="onScroll()"
+    *ngFor="let character of characters; let indexOfelement=index;">
+        <div class="card_left">
+            <img class="img_card" src="{{character.image}}">
+        </div>
+        <div class="card_right">
+            <form class="form_card">
+                <div class="form_field">
+                    <h2 class="card_title">{{character.name}}</h2>
+                    <hr class="hr2" color= "#F15F79">
+                </div>
+                <div class="form_field">
+                    <label class="text_card_1">{{character.location.name}}</label>
+                    <label class="text_card_2">Especie: {{character.species}}</label>
+                </div>
+                <div class="form_button_card">
+                    <input type="button" value="Ver detalles" (click)="openDialog(indexOfelement)">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<button [ngClass]="'no-hidden'"
+*ngIf="showGoUpButton" class="btn btn-dark"
+(click)="scrollTop()">UP</button>

@@ -1,0 +1,69 @@
+<div class="card_detail">
+    <div class="card_left_detail">
+        <img src="{{data.character.image}}">
+        <label class="text_detail1">Especie:</label>
+        <p class="text_detail2">{{data.character.species}}</p>
+        <label class="text_detail1">Estado:</label>
+        <p class="text_detail2">{{data.character.status | spanish:'status'}}</p>
+    </div>
+    <div class="card_right">
+        <form class="form_card">
+            <button (click)="onNoClick()">X</button>
+            <div class="form_field">
+                <h2 class="card_title">{{data.character.name}}</h2>
+                <hr class="hr2" color= "#F15F79">
+                <label>{{data.character.location.name}}</label>
+            </div>
+            <div class="form_field_detail">
+                <label>Creado:</label>
+                <p>{{data.character.created | date:'dd/MM/yyyy'}}</p>
+            </div>
+            <div class="form_field_detail">
+                <label>Origen:</label>
+                <p>{{data.character.origin.name}}</p>
+            </div>
+            <div class="form_field_detail">
+                <label>Genero:</label>
+                <p>{{data.character.gender | spanish:'gender' }}</p>
+            </div>
+            <div class="form_field_detail">
+                <label>Tipo:</label>
+                <p>{{data.character.type == "" ? '--':data.character.type}}</p>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="card_detail2">
+    <img class="area1" src="{{data.character.image}}">
+    <div class="area2">
+        <label class="text_detail1">Especie:</label>
+        <p class="text_detail2">{{data.character.species}}</p>
+        <label class="text_detail1">Estado:</label>
+        <p class="text_detail2">{{data.character.status | spanish:'status'}}</p>
+    </div>
+    <button class="area3" (click)="onNoClick()">X</button>
+    <div class="form_field area4">
+        <h2 class="card_title">{{data.character.name}}</h2>
+        <hr class="hr2" color= "#F15F79">
+        <label>{{data.character.location.name}}</label>
+    </div>
+    <div class="area5">
+        <div class="form_field_detail">
+            <label>Creado:</label>
+            <p>{{data.character.created | date:'dd/MM/yyyy'}}</p>
+        </div>
+        <div class="form_field_detail">
+            <label>Origen:</label>
+            <p>{{data.character.origin.name}}</p>
+        </div>
+        <div class="form_field_detail">
+            <label>Genero:</label>
+            <p>{{data.character.gender | spanish:'gender' }}</p>
+        </div>
+        <div class="form_field_detail">
+            <label>Tipo:</label>
+            <p>{{data.character.type == "" ? '--':data.character.type}}</p>
+        </div>
+    </div>
+</div>
+

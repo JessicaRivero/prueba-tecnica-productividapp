@@ -1,0 +1,11 @@
+
+@media (max-width: 970px){
+    .wrapper{
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 9% 77% 14%;
+    }
+    .content_info{
+        overflow-y: scroll;
+    }
+}

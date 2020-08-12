@@ -1,0 +1,103 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 17% 1fr;
+    height: 85vh;
+    background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+    box-shadow: 0px 1px 0px #E7E8F2;
+    padding-bottom: 35px;
+}
+.hide{
+    display: block;
+}
+.logo {
+    left: 1.39%;
+    right: 83.82%;
+    top: 1.07%;
+    bottom: 92.87%;
+    grid-column: 1/4;
+}
+.img_portal{
+    text-align: center;
+    left: 38.75%;
+    right: 42.92%;
+    top: 8.79%;
+    bottom: 49.41%;
+}
+.container3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.img_rick_morty{
+    justify-self: center;
+    align-self: center;
+    left: 28.82%;
+    right: 48.81%;
+    top: 12.01%;
+    bottom: 50.93%;
+}
+.img_meez_1{
+    justify-self: center;
+    align-self: center;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.img_meez_2{
+    align-self: start;
+    justify-self: center;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.text_2{
+    position: absolute;
+    width: 123px;
+    height: 22px;
+    left: 1170px;
+    top: 471px;
+    font-family: Creepster;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    opacity: 0.5;
+}
+.text_1{
+    position: absolute;
+    width: 136px;
+    height: 22px;
+    left: 964px;
+    top: 471px;
+    font-family: Creepster;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    opacity: 0.5;
+}
+.active_text{
+    border-bottom: 3px solid #FFFFFF;
+    opacity: inherit;
+}
+.active_img{
+    opacity: inherit;
+}
+
+@media (min-width: 300px) and (max-width: 970px){
+    .logo {
+        justify-self: center;
+    }
+    .hide{
+        display: none;
+    }
+    .container{
+        height: 10vh;
+    }
+
+}
+

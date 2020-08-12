@@ -1,0 +1,14 @@
+<div class="footer hide">
+    <div (click)="callActivateCharacter()" [ngClass]="(activateCharacter==true)?'img_footer active_img':'img_footer'">
+        <img src="../assets/images/rick.svg">
+    </div>
+    <div (click)="callActivateEpisodes()" [ngClass]="(activateEpisodes==true)?'img_footer active_img':'img_footer'">
+        <img src="../assets/images/Morty.svg">
+    </div>
+    <div (click)="callActivateCharacter()">
+        <h3 [ngClass]="(activateCharacter==true)?'text monster active_text':'text monster'">PERSONAJES</h3>
+    </div>
+    <div (click)="callActivateEpisodes()">
+        <h3  [ngClass]="(activateEpisodes==true)?'text monster active_text':'text monster'">EPISODIOS</h3>
+    </div>
+</div>

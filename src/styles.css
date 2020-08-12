@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url(//db.onlinewebfonts.com/c/2e0b84ce43394ca2a8a0a5cbd5abf241?family=Creepster);
+
+@font-face {
+    font-family: "Creepster";
+    src        : url("//db.onlinewebfonts.com/t/2e0b84ce43394ca2a8a0a5cbd5abf241.eot");
+    src        : url("//db.onlinewebfonts.com/t/2e0b84ce43394ca2a8a0a5cbd5abf241.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/2e0b84ce43394ca2a8a0a5cbd5abf241.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/2e0b84ce43394ca2a8a0a5cbd5abf241.woff") format("woff"), url("//db.onlinewebfonts.com/t/2e0b84ce43394ca2a8a0a5cbd5abf241.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/2e0b84ce43394ca2a8a0a5cbd5abf241.svg#Creepster") format("svg");
+}
+
+.monster {
+    font-family: "Creepster";
+    color      : white;
+}
+
+body,
+html {
+    font-family: 'Roboto';
+}
+
+body {
+    margin: 0;
+}
+
+.content {
+    display              : grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap                  : 3em;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin     : 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
