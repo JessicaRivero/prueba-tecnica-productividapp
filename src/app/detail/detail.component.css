@@ -118,8 +118,8 @@
     display: none;
     margin: 0;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 22% 18% 60%;
-    grid-template-areas: "image titulo" "image detail1" "detail2 detail2";
+    grid-template-rows: 5% 20% 15% 60%;
+    grid-template-areas: ". btn" "image titulo" "image detail1" "detail2 detail2";
 }
 
 @media (max-width: 970px){
@@ -153,5 +153,15 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         background-color: #F6F6F6;
+    }
+    button{
+        background-color: #FFFFFF;
+        border: none;
+        font-size: 14px;
+        color: #7c8080;
+        font-weight: 600;
+        outline-color: #FFFFFF;
+        text-align: end;
+        cursor: pointer;
     }
 }

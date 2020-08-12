@@ -4,12 +4,13 @@
     grid-template-rows: 1fr;
     height: 8vh;
     background: #ffffff;
-    grid-template-areas: "filtro .";
+    grid-template-areas: "filtro ." "content_filtro .";
     padding-top: 2%;
 }
 .filter_content{
     padding-left: 12%;
     z-index: 5;
+    grid-area: content_filtro;
 }
 .hidden{ 
     display: none;
@@ -225,7 +226,7 @@ select::-ms-expand {
 
 @media (max-width: 970px){
     .section_filter{
-        grid-template-areas: "filtro filtro";
+        grid-template-areas: "filtro filtro" "content_filtro content_filtro";
     }
     .hr1{
         width: 80%; 
@@ -241,6 +242,9 @@ select::-ms-expand {
     }
     .section_cards{
         grid-template-columns: 1fr;
+    }
+    .form{
+        align-content: center;
     }
     .form_button_card > button{
         font-size: 13px;
