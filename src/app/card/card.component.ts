@@ -47,7 +47,7 @@ export class CardComponent implements OnInit {
 
       },
       error => {
-        alert('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
+        console.log('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
       }
     );
   }
@@ -65,6 +65,7 @@ export class CardComponent implements OnInit {
       this._characterService.getAllCharactersByPage(this.nextPage.toString() + this.urlFiltetParams).subscribe(
         response => {
           if (response.info.count > 0) {
+            this.finishPage = response.info.pages;
             for (let i = 0; i < response.results.length; i++) {
               if (!this.characters.some((item) => item.id == response.results[i].id)) {
                 this.characters.push(response.results[i]);
@@ -78,7 +79,7 @@ export class CardComponent implements OnInit {
         },
 
         error => {
-          alert('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
+          console.log('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
         }
       );
     } 
@@ -118,6 +119,7 @@ export class CardComponent implements OnInit {
   }
 
   activeFilter() {
+    this.urlFiltetParams ="";
     this.characters = [];
     if (this.filter.gender != "") {
       this.urlFiltetParams = "&gender=" + this.filter.gender;
@@ -140,6 +142,7 @@ export class CardComponent implements OnInit {
     this._characterService.getAllCharactersByPage(this.nextPage.toString() + this.urlFiltetParams).subscribe(
       response => {
         if (response.info.count > 0) {
+          this.finishPage = response.info.pages;
           for (let i = 0; i < response.results.length; i++) {
             if (!this.characters.some((item) => item.id == response.results[i].id)) {
               this.characters.push(response.results[i]);
@@ -151,9 +154,8 @@ export class CardComponent implements OnInit {
         }
         this.nextPage++;
       },
-
       error => {
-        alert('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
+        console.log('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
       }
     );
   }
