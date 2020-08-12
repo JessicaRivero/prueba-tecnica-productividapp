@@ -47,7 +47,7 @@ export class CardComponent implements OnInit {
 
       },
       error => {
-        alert('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
+        console.log('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
       }
     );
   }
@@ -78,7 +78,7 @@ export class CardComponent implements OnInit {
         },
 
         error => {
-          alert('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
+          console.log('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
         }
       );
     } 
@@ -153,7 +153,7 @@ export class CardComponent implements OnInit {
       },
 
       error => {
-        alert('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
+        console.log('Ocurrio un problema inesperado, intente de nuevo si el problema persiste comuniquese con soporte tecnico');
       }
     );
   }
