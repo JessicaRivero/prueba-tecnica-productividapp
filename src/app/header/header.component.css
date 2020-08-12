@@ -98,6 +98,7 @@
     }
     .container{
         height: 4.5vh;
+        min-height: 4.5vh;
     }
 
 }
